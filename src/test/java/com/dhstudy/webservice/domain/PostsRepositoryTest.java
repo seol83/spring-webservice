@@ -1,5 +1,6 @@
 package com.dhstudy.webservice.domain;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.junit.jupiter.api.AfterEach;
@@ -9,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 class PostsRepositoryTest {
@@ -43,6 +45,22 @@ class PostsRepositoryTest {
         assertThat(posts.getTitle(), is("테스트 게시글"));
         assertThat(posts.getContent(), is("테스트 본문"));
 
-	}
+    }
+    
+    @Test
+    public void BaseTimeEntity_등록(){
+        //given
+        LocalDateTime now = LocalDateTime.now();
+        postsRepository.save(Posts.builder().title("테스트 게시글").content("테스트 본문").author("jojodu@gmail.com").build());
+
+        //when
+        List<Posts> postList = postsRepository.findAll();
+
+        //then
+        Posts posts = postList.get(0);
+        assertTrue(posts.getCreateDate().isAfter(now));
+        assertTrue(posts.getModifieDate().isAfter(now));
+
+    }
 
 }
