@@ -21,6 +21,6 @@ public class WebControllerTest {
         String body = this.restTemplate.getForObject("/", String.class);
 
         //then
-        assertThat(body).contains("스프링부트로 시작하는 웹서비스");
+        assertThat(body).contains("Start Spring Webservice");
     }
 }
