@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.AllArgsConstructor;
 
 import com.dhstudy.webservice.domain.PostsRepository;
-import com.dhstudy.webservice.dto.PostsSaveRequestDto;
+import com.dhstudy.webservice.dto.posts.PostsSaveRequestDto;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
