@@ -4,8 +4,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.AllArgsConstructor;
 
-import com.dhstudy.webservice.domain.PostsRepository;
 import com.dhstudy.webservice.dto.posts.PostsSaveRequestDto;
+import com.dhstudy.webservice.service.PostsService;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @AllArgsConstructor
 public class WebRestController {
 
-    private PostsRepository postsRepository;
+    private PostsService postsService;
 
     @GetMapping(value="/hello")
     public String hello() {
@@ -24,8 +24,8 @@ public class WebRestController {
     }
 
     @PostMapping(value="/posts")
-    public void savePosts(@RequestBody PostsSaveRequestDto dto) {
-        postsRepository.save(dto.toEntity());
+    public Long savePosts(@RequestBody PostsSaveRequestDto dto) {
+        return postsService.save(dto);
     }
     
 }
