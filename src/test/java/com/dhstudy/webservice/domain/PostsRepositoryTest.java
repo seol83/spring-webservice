@@ -46,7 +46,7 @@ class PostsRepositoryTest {
         assertThat(posts.getContent(), is("테스트 본문"));
 
     }
-    
+
     @Test
     public void BaseTimeEntity_등록(){
         //given
@@ -58,9 +58,8 @@ class PostsRepositoryTest {
 
         //then
         Posts posts = postList.get(0);
-        assertTrue(posts.getCreateDate().isAfter(now));
-        assertTrue(posts.getModifieDate().isAfter(now));
+        assertTrue(posts.getCreatedDate().isAfter(now));
+        assertTrue(posts.getModifiedDate().isAfter(now));
 
     }
-
 }
