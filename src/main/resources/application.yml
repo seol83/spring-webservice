@@ -21,3 +21,11 @@ spring:
         show-sql: true
         hibernate:
             ddl-auto: create-drop
+    devtools:
+        livereload:
+            enabled: true
+        restart:
+            enabled: true
+
+handlebars:
+    cache: false
