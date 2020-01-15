@@ -1,6 +1,6 @@
 package com.dhstudy.webservice.dto.posts;
 
-import com.dhstudy.webservice.domain.Posts;
+import com.dhstudy.webservice.domain.posts.Posts;
 
 import lombok.Builder;
 import lombok.Getter;

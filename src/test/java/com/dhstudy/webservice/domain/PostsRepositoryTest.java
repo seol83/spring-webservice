@@ -3,6 +3,9 @@ package com.dhstudy.webservice.domain;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.dhstudy.webservice.domain.posts.Posts;
+import com.dhstudy.webservice.domain.posts.PostsRepository;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

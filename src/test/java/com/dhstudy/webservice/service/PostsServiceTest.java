@@ -1,7 +1,7 @@
 package com.dhstudy.webservice.service;
 
-import com.dhstudy.webservice.domain.Posts;
-import com.dhstudy.webservice.domain.PostsRepository;
+import com.dhstudy.webservice.domain.posts.Posts;
+import com.dhstudy.webservice.domain.posts.PostsRepository;
 import com.dhstudy.webservice.dto.posts.PostsSaveRequestDto;
 
 import org.junit.jupiter.api.AfterEach;
