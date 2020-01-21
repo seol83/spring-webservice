@@ -2,9 +2,19 @@ spring:
     h2:
         console:
             enabled: true
+<<<<<<< HEAD
 
     datasource:
         driver-class-name: org.h2.Driver
         url: jdbc:h2:file:D:/work/workspace/spring-boot-vsc/h2db/test_db;AUTO_SERVER=TRUE
         username: dhseol
         password: 1234
+=======
+            path: /test_db
+
+    datasource:
+        driver-class-name: org.h2.Driver
+        url: jdbc:h2:file:D:/work/test_db;AUTO_SERVER=true
+        username: admin
+        password: 1234
+>>>>>>> ff3866318852464a82fb7515f33b14318b3c9ee8
